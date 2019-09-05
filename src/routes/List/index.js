@@ -4,7 +4,7 @@ import Table from "./components/Table";
 import Pagination from "./components/Pagination";
 import Search from "./components/Search";
 import getAoEResource from "../../api";
-import { sorting } from "../../utils";
+import { sorting, DetailContext } from "../../utils";
 import "./styles.css";
 
 class List extends React.Component {
@@ -121,28 +121,33 @@ class List extends React.Component {
     } = this.state;
 
     return (
-      <div>
-        <Resources
-          active={resource}
-          onChangeResource={this.handleOnChangeResource}
-        />
-        <Search value={search} onInputChange={this.handleOnSearch} />
-        <div className="list">
-          <Table
-            data={filteredData.slice((page - 1) * rows, page * rows)}
-            resource={resource}
-            loading={loading}
-            orderKey={orderKey}
-            onChangeOrder={this.handleOnChangeOrder}
-          />
-          <Pagination
-            page={page}
-            pages={pages}
-            pagesRange={pagesRange}
-            onChangePage={this.handleOnChangePage}
-          />
-        </div>
-      </div>
+      <DetailContext.Consumer>
+        {({ onSelectDetail }) => (
+          <React.Fragment>
+            <Resources
+              active={resource}
+              onChangeResource={this.handleOnChangeResource}
+            />
+            <Search value={search} onInputChange={this.handleOnSearch} />
+            <div className="list">
+              <Table
+                data={filteredData.slice((page - 1) * rows, page * rows)}
+                resource={resource}
+                loading={loading}
+                orderKey={orderKey}
+                onChangeOrder={this.handleOnChangeOrder}
+                onSelectItem={onSelectDetail}
+              />
+              <Pagination
+                page={page}
+                pages={pages}
+                pagesRange={pagesRange}
+                onChangePage={this.handleOnChangePage}
+              />
+            </div>
+          </React.Fragment>
+        )}
+      </DetailContext.Consumer>
     );
   }
 }

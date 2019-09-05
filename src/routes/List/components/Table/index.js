@@ -4,11 +4,22 @@ import { Loader } from "../../../../components";
 import { schemas } from "../../../../utils";
 import "./styles.css";
 
-const Table = ({ data, resource, loading, orderKey, onChangeOrder }) => {
+const Table = ({
+  data,
+  resource,
+  loading,
+  orderKey,
+  onChangeOrder,
+  onSelectItem
+}) => {
   const schemaProperties = schemas[resource];
 
   const handleOnChangeOrder = prop => () => {
     onChangeOrder(prop);
+  };
+
+  const handleOnSelectItem = item => () => {
+    onSelectItem(item);
   };
 
   return (
@@ -42,7 +53,12 @@ const Table = ({ data, resource, loading, orderKey, onChangeOrder }) => {
             <tr key={item.id}>
               {schemaProperties.map((prop, i) => (
                 <td key={`${item[prop]}${i}`}>
-                  <Link to={`/detail/${item.id}`}>{item[prop]}</Link>
+                  <Link
+                    to={`/detail/${item.id}`}
+                    onClick={handleOnSelectItem(item)}
+                  >
+                    {item[prop]}
+                  </Link>
                 </td>
               ))}
             </tr>
