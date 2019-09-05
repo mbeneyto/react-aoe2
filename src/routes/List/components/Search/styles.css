@@ -1,0 +1,23 @@
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search img {
+  position: absolute;
+  width: 20px;
+  left: var(--spacing-sm);
+}
+
+.search input {
+  width: 250px;
+  padding-left: var(--spacing-xl);
+  color: var(--color-slate-gray);
+  background-color: var(--color-catskill-white);
+  transition: all 0.5s ease-in;
+}
+
+.search input:focus {
+  width: 300px;
+}

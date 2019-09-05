@@ -1,0 +1,11 @@
+.resources {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.resources__item {
+  margin: var(--spacing-sm);
+  width: 200px;
+}

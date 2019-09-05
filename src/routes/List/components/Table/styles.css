@@ -1,0 +1,36 @@
+.table {
+  width: 100%;
+}
+
+.table__head {
+  border-bottom: 2px solid var(--color-broom);
+  text-align: left;
+}
+
+.table__head th {
+  width: 25%;
+  position: relative;
+  padding: var(--spacing-md);
+  font-size: var(--font-sm);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.table__filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table__caret {
+  position: absolute;
+  right: 0;
+}
+
+.table__body tr:not(:last-child) {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.table__body td {
+  padding: var(--spacing-md);
+}

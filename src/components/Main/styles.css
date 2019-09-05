@@ -1,0 +1,7 @@
+.main {
+  width: 90%;
+  margin: var(--spacing-xxl) auto;
+}
+
+@media screen and (min-width: 500px) {
+}
