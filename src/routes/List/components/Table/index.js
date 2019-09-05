@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Loader } from "../../../../components";
 import { schemas } from "../../../../utils";
 import "./styles.css";
 
@@ -32,14 +33,16 @@ const Table = ({ data, resource, loading, orderKey, onChangeOrder }) => {
       <tbody className="table__body">
         {loading ? (
           <tr>
-            <td>Loading...</td>
+            <td colSpan="3">
+              <Loader />
+            </td>
           </tr>
         ) : (
           data.map(item => (
             <tr key={item.id}>
               {schemaProperties.map((prop, i) => (
                 <td key={`${item[prop]}${i}`}>
-                  <Link to={`/detail/${item.name}`}>{item[prop]}</Link>
+                  <Link to={`/detail/${item.id}`}>{item[prop]}</Link>
                 </td>
               ))}
             </tr>
