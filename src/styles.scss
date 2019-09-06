@@ -1,40 +1,36 @@
-:root {
-  /* Color */
-  --color-white: #ffffff;
+/* Color */
+$color-grey100: #f7fafc;
+$color-grey300: #e2e8f0;
+$color-grey500: #a0aec0;
+$color-grey600: #718096;
+$color-grey800: #2d3748;
 
-  --color-grey100: #f7fafc;
-  --color-grey300: #e2e8f0;
-  --color-grey500: #a0aec0;
-  --color-grey600: #718096;
-  --color-grey800: #2d3748;
+$color-blue600: #3182ce;
+$color-blue500: #4299e1;
 
-  --color-blue600: #3182ce;
-  --color-blue500: #4299e1;
+/* Font */
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
 
-  /* Font */
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
+$font-base-size: 16px;
+$font-scale-ratio: 1.2;
 
-  --font-base-size: 16px;
-  --font-scale-ratio: 1.2;
+$font-sm: 1em / $font-scale-ratio;
+$font-md: 1em * $font-scale-ratio;
+$font-lg: 1em * $font-scale-ratio * $font-scale-ratio;
 
-  --font-sm: calc(1em / var(--font-scale-ratio));
-  --font-md: calc(1em * var(--font-scale-ratio));
-  --font-lg: calc(1em * var(--font-scale-ratio) * var(--font-scale-ratio));
+/* Spacing */
+$spacing-xxxl: $font-base-size * 5; /* 80px */
+$spacing-xxl: $font-base-size * 3; /* 48px */
+$spacing-xl: $font-base-size * 2; /* 32px */
+$spacing-lg: $font-base-size * 1.5; /* 24px */
+$spacing-md: $font-base-size * 1; /* 16px */
+$spacing-sm: $font-base-size * 0.5; /* 8px */
 
-  /* Spacing */
-  --spacing-xxxl: calc(var(--font-base-size) * 5); /* 80px */
-  --spacing-xxl: calc(var(--font-base-size) * 3); /* 48px */
-  --spacing-xl: calc(var(--font-base-size) * 2); /* 32px */
-  --spacing-lg: calc(var(--font-base-size) * 1.5); /* 24px */
-  --spacing-md: calc(var(--font-base-size) * 1); /* 16px */
-  --spacing-sm: calc(var(--font-base-size) * 0.5); /* 8px */
+$radius: 4px;
 
-  --radius: 4px;
-
-  /* Alpha */
-  --alpha32: 0.32;
-}
+/* Alpha */
+$alpha32: 0.32;
 
 html {
   box-sizing: border-box;
@@ -51,8 +47,8 @@ body {
 body,
 button,
 input {
-  font-size: var(--font-base-size);
-  color: var(--color-grey800);
+  font-size: $font-base-size;
+  color: $color-grey800;
 }
 
 *,
@@ -90,6 +86,6 @@ table {
 
 input {
   border: 0;
-  border-radius: var(--radius);
+  border-radius: $radius;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }

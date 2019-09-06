@@ -1,33 +1,35 @@
+@import '../../styles.scss';
+
 .button {
-  padding: var(--spacing-md) var(--spacing-xl);
+  padding: $spacing-md $spacing-xl;
   border: 0;
   outline: none;
-  border-radius: var(--radius);
+  border-radius: $radius;
   text-align: center;
-  font-weight: var(--font-weight-bold);
+  font-weight: $font-weight-bold;
   cursor: pointer;
   transition: all 0.3s linear;
 }
 
 .button--primary {
-  background-color: var(--color-grey600);
-  color: var(--color-grey100);
+  background-color: $color-grey600;
+  color: $color-grey100;
 }
 
 .button--primary:hover {
-  background-color: var(--color-grey500);
+  background-color: $color-grey500;
 }
 
 .button--active {
-  background-color: var(--color-blue600);
+  background-color: $color-blue600;
 }
 
 .button--active:hover {
-  background-color: var(--color-blue500);
+  background-color: $color-blue500;
 }
 
 .button--disabled {
-  opacity: var(--alpha32);
+  opacity: $alpha32;
   pointer-events: none;
 }
 

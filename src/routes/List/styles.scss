@@ -1,5 +1,7 @@
+@import '../../styles.scss';
+
 .list {
-  border-radius: var(--radius);
-  background-color: var(--color-grey300);
+  border-radius: $radius;
+  background-color: $color-grey300;
   overflow: hidden;
 }

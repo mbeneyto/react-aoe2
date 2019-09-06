@@ -1,8 +1,7 @@
+@import '../../styles.scss';
+
 .main {
   width: 90%;
   max-width: 1024px;
-  margin: var(--spacing-xxl) auto;
-}
-
-@media screen and (min-width: 500px) {
+  margin: $spacing-xxl auto;
 }

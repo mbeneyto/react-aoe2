@@ -1,14 +1,16 @@
+@import '../../styles.scss';
+
 .pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-grey500);
-  border-top: 4px solid var(--color-grey100);
+  background-color: $color-grey500;
+  border-top: 4px solid $color-grey100;
 }
 
 .pagination__pages {
-  margin: 0 var(--spacing-md);
-  font-weight: var(--font-weight-semibold);
+  margin: 0 $spacing-md;
+  font-weight: $font-weight-semibold;
 }
 
 .pagination__actions {
@@ -16,5 +18,5 @@
 }
 
 .pagination__separator {
-  margin-left: var(--spacing-sm);
+  margin-left: $spacing-sm;
 }

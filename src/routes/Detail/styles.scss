@@ -1,5 +1,7 @@
+@import '../../styles.scss';
+
 .detail__back {
-  font-size: var(--font-lg);
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--spacing-lg);
+  font-size: $font-lg;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-lg;
 }
