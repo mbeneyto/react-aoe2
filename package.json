@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "framer-motion": "^1.6.7",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-app-polyfill": "^1.0.2",

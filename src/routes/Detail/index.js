@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { DetailContext } from '../../utils';
+import { motion } from 'framer-motion';
+import { DetailContext, transitions } from '../../utils';
 import Resource from './components/Resource';
 
 const Detail = () => {
@@ -15,12 +16,15 @@ const Detail = () => {
   };
 
   return (
-    <React.Fragment>
-      <Link to="/">
-        <p className="detail__back">← Back</p>
-      </Link>
-      {renderResourceDetail()}
-    </React.Fragment>
+    <motion.div initial="exit" animate="enter" exit="exit">
+      <motion.div variants={transitions.enterFromRight}>
+        <Link to="/">
+          <p className="detail__back">← Back</p>
+        </Link>
+      </motion.div>
+
+      <motion.div variants={transitions.enterFromBottom}>{renderResourceDetail()}</motion.div>
+    </motion.div>
   );
 };
 
