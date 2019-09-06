@@ -4,7 +4,7 @@ import Table from './components/Table';
 import Pagination from './components/Pagination';
 import Search from './components/Search';
 import getAoEResource from '../../api';
-import { sorting, DetailContext } from '../../utils';
+import { schemas, sorting, DetailContext } from '../../utils';
 import './styles.css';
 
 class List extends React.Component {
@@ -39,7 +39,7 @@ class List extends React.Component {
     }
 
     if (prevState.search !== search) {
-      this.handleSearch(search, data);
+      this.handleSearch(search, data, resource);
     }
   }
 
@@ -65,11 +65,30 @@ class List extends React.Component {
     this.setState({ filteredData: orderedData });
   }
 
-  handleSearch(search, data) {
+  handleSearch(search, data, resource) {
     const lcSearch = search.toLowerCase();
+    const schemaProperties = schemas[resource];
 
     const filteredData = data.filter(item => {
-      return item.name.toLowerCase().includes(lcSearch);
+      const isValid = schemaProperties.some(prop => {
+        const itemProp = item[prop];
+
+        if (!itemProp) {
+          return false;
+        }
+
+        if (
+          String(itemProp)
+            .toLowerCase()
+            .includes(lcSearch)
+        ) {
+          return true;
+        }
+
+        return false;
+      });
+
+      return isValid;
     });
     this.setState({ filteredData, page: 1, pagesRange: [true, false] });
   }

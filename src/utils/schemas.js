@@ -1,6 +1,6 @@
 export default {
   civilizations: ['name', 'expansion', 'army_type'],
-  units: ['name', 'expansion', 'age'],
-  structures: ['name', 'expansion', 'age'],
+  units: ['name', 'armor', 'age'],
+  structures: ['name', 'build_time', 'age'],
   technologies: ['name', 'expansion', 'age']
 };
