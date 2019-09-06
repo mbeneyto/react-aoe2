@@ -1,12 +1,10 @@
-@import '../../styles.scss';
-
 .header {
   display: flex;
   justify-content: center;
   margin: $spacing-xxl 0 $spacing-xxxl;
-}
 
-.header__logo {
-  height: 20vmin;
-  pointer-events: none;
+  &__logo {
+    height: 20vmin;
+    pointer-events: none;
+  }
 }

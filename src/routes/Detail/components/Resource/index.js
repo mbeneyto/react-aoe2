@@ -7,7 +7,6 @@ import StructureDetail from '../StructureDetail';
 import structuresImg from '../../../../assets/structures.jpg';
 import TechnologiesDetail from '../TechnologyDetail';
 import technologiesImg from '../../../../assets/technologies.jpg';
-import './styles.scss';
 
 function getResource(detail, type) {
   const resources = {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReactComponent as CheckSVG } from '../../../../assets/check-circle.svg';
-import './styles.scss';
 
 const StructureDetail = ({ structure }) => (
   <React.Fragment>

@@ -1,0 +1,77 @@
+@import '../../utils/vars.scss';
+
+@import '../Button/styles.scss';
+@import '../Header/styles.scss';
+@import '../Loader/styles.scss';
+@import '../Main/styles.scss';
+
+@import '../../routes/List/styles.scss';
+@import '../../routes/List/components/Pagination/styles.scss';
+@import '../../routes/List/components/Resources/styles.scss';
+@import '../../routes/List/components/Search/styles.scss';
+@import '../../routes/List/components/Table/styles.scss';
+
+@import '../../routes/Detail/styles.scss';
+@import '../../routes/Detail/components/CivilizationDetail/styles.scss';
+@import '../../routes/Detail/components/Resource/styles.scss';
+@import '../../routes/Detail/components/StructureDetail/styles.scss';
+@import '../../routes/Detail/components/TechnologyDetail/styles.scss';
+@import '../../routes/Detail/components/UnitDetail/styles.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+input {
+  font-size: $font-base-size;
+  color: $color-grey800;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border: 0;
+  border-radius: $radius;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}

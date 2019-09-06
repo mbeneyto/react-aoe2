@@ -1,22 +1,20 @@
-@import '../../styles.scss';
-
 .pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $color-grey500;
   border-top: 4px solid $color-grey100;
-}
 
-.pagination__pages {
-  margin: 0 $spacing-md;
-  font-weight: $font-weight-semibold;
-}
+  &__pages {
+    margin: 0 $spacing-md;
+    font-weight: $font-weight-semibold;
+  }
 
-.pagination__actions {
-  display: flex;
-}
+  &__actions {
+    display: flex;
+  }
 
-.pagination__separator {
-  margin-left: $spacing-sm;
+  &__separator {
+    margin-left: $spacing-sm;
+  }
 }

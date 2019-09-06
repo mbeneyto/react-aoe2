@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Loader } from '../../../../components';
 import { schemas } from '../../../../utils';
-import './styles.scss';
 
 const Table = ({ data, resource, loading, orderKey, onChangeOrder, onSelectItem }) => {
   const schemaProperties = schemas[resource];
@@ -39,9 +38,9 @@ const Table = ({ data, resource, loading, orderKey, onChangeOrder, onSelectItem 
           </tr>
         ) : (
           data.map(item => (
-            <tr key={item.id}>
+            <tr key={item.id} className="table__registry">
               {schemaProperties.map((prop, i) => (
-                <td key={`${item[prop]}${i}`}>
+                <td key={`${item[prop]}${i}`} className="table__property">
                   <Link to={`/detail/${item.id}`} onClick={handleOnSelectItem(item)}>
                     {item[prop]}
                   </Link>

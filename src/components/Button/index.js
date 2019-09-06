@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '../../utils';
-import './styles.scss';
 
 const Button = ({ active, full, primary, disabled, children, onClick }) => {
   const classes = {

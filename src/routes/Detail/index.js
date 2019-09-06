@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { DetailContext } from '../../utils';
 import Resource from './components/Resource';
-import './styles.scss';
 
 const Detail = () => {
   const { detail } = useContext(DetailContext);

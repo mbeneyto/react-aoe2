@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from '../../../../components/index';
-import './styles.scss';
 
 const Pagination = ({ page, pages, pagesRange, onChangePage }) => {
   const handleOnChangePage = nextPage => () => {

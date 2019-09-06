@@ -1,31 +1,29 @@
-@import '../../styles.scss';
-
 .search {
   display: flex;
   justify-content: flex-end;
   margin-bottom: $spacing-md;
-}
 
-.search__wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 
-.search__img {
-  position: absolute;
-  width: 20px;
-  left: $spacing-sm;
-}
+  &__img {
+    position: absolute;
+    width: 20px;
+    left: $spacing-sm;
+  }
 
-.search__input {
-  width: 250px;
-  padding: $spacing-md $spacing-xl;
-  color: $color-grey600;
-  background-color: $color-grey300;
-  transition: all 0.5s ease-in;
-}
+  &__input {
+    width: 250px;
+    padding: $spacing-md $spacing-xl;
+    color: $color-grey600;
+    background-color: $color-grey300;
+    transition: all 0.5s ease-in;
 
-.search__input:focus {
-  width: 300px;
+    &:focus {
+      width: 300px;
+    }
+  }
 }

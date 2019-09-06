@@ -4,6 +4,7 @@ import Header from '../Header';
 import Main from '../Main';
 import List from '../../routes/List';
 import Detail from '../../routes/Detail';
+import './styles.scss';
 
 const App = () => (
   <Router>

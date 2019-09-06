@@ -8,7 +8,7 @@
 
 ## Production mode
 
-The project is published in [Netlify](https://ecstatic-goldstine-0e87f2.netlify.com/)
+The project is published in [Netlify](https://react-aoe2.netlify.com/)
 
 ## Assumptions
 

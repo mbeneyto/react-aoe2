@@ -5,7 +5,6 @@ import Pagination from './components/Pagination';
 import Search from './components/Search';
 import getAoEResource from '../../api';
 import { schemas, sorting, DetailContext } from '../../utils';
-import './styles.scss';
 
 class List extends React.Component {
   state = {

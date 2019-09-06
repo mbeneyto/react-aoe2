@@ -1,40 +1,38 @@
-@import '../../styles.scss';
-
 .table {
   width: 100%;
-}
 
-.table__head {
-  background-color: $color-grey500;
-  border-bottom: 4px solid $color-grey100;
-  text-align: left;
-  font-weight: $font-weight-bold;
-}
+  &__head {
+    background-color: $color-grey500;
+    border-bottom: 4px solid $color-grey100;
+    text-align: left;
+    font-weight: $font-weight-bold;
+  }
 
-.table__head th {
-  width: 25%;
-  position: relative;
-  padding: $spacing-md;
-  font-size: $font-sm;
-  text-transform: uppercase;
-  cursor: pointer;
-}
+  &__head th {
+    width: 25%;
+    position: relative;
+    padding: $spacing-md;
+    font-size: $font-sm;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 
-.table__filter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  &__filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.table__caret {
-  position: absolute;
-  right: 0;
-}
+  &__caret {
+    position: absolute;
+    right: 0;
+  }
 
-.table__body tr:not(:last-child) {
-  border-bottom: 1px solid $color-grey100;
-}
+  &__registry {
+    border-bottom: 1px solid $color-grey100;
+  }
 
-.table__body td {
-  padding: $spacing-md;
+  &__property {
+    padding: $spacing-md;
+  }
 }

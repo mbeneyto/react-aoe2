@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from '../../../../components/index';
-import './styles.scss';
 
 const resources = ['civilizations', 'units', 'structures', 'technologies'];
 

@@ -1,13 +1,11 @@
-@import '../../styles.scss';
-
 .resources {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: $spacing-xxl;
-}
 
-.resources__item {
-  margin: $spacing-sm;
-  width: 200px;
+  &__item {
+    margin: $spacing-sm;
+    width: 200px;
+  }
 }

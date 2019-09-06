@@ -1,13 +1,11 @@
-@import '../../styles.scss';
-
 .loader {
   display: flex;
   justify-content: center;
-}
 
-.loader__img {
-  padding: $spacing-md;
-  animation: spin 2s infinite;
+  &__img {
+    padding: $spacing-md;
+    animation: spin 2s infinite;
+  }
 }
 
 @keyframes spin {
