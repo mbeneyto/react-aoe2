@@ -10,16 +10,20 @@
 }
 
 .button--primary {
-  background-color: var(--color-snuff);
-  color: var(--color-black);
+  background-color: var(--color-grey600);
+  color: var(--color-grey100);
 }
 
 .button--primary:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-grey500);
 }
 
 .button--active {
-  background-color: var(--color-broom);
+  background-color: var(--color-blue600);
+}
+
+.button--active:hover {
+  background-color: var(--color-blue500);
 }
 
 .button--disabled {
@@ -31,8 +35,3 @@
   display: block;
   width: 100%;
 }
-
-/* .button--accent {
-  background-color: var(--color-accent, hsl(349, 75%, 51%));
-  color: var(--color-white, hsl(0, 0%, 100%));
-}  */

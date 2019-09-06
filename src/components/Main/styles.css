@@ -1,5 +1,6 @@
 .main {
   width: 90%;
+  max-width: 1024px;
   margin: var(--spacing-xxl) auto;
 }
 

@@ -1,23 +1,29 @@
 .search {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-md);
+}
+
+.search__wrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.search img {
+.search__img {
   position: absolute;
   width: 20px;
   left: var(--spacing-sm);
 }
 
-.search input {
+.search__input {
   width: 250px;
-  padding-left: var(--spacing-xl);
+  padding: var(--spacing-md) var(--spacing-xl);
   color: var(--color-slate-gray);
   background-color: var(--color-catskill-white);
   transition: all 0.5s ease-in;
 }
 
-.search input:focus {
+.search__input:focus {
   width: 300px;
 }

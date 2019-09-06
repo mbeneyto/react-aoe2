@@ -2,8 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--color-grey500);
+  border-top: 4px solid var(--color-grey100);
 }
 
-.pagination p {
-  margin: 0 var(--spacing-m);
+.pagination__pages {
+  margin: 0 var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.pagination__actions {
+  display: flex;
+}
+
+.pagination__separator {
+  margin-left: var(--spacing-sm);
 }

@@ -1,15 +1,15 @@
-import React from "react";
-import Resources from "./components/Resources";
-import Table from "./components/Table";
-import Pagination from "./components/Pagination";
-import Search from "./components/Search";
-import getAoEResource from "../../api";
-import { sorting, DetailContext } from "../../utils";
-import "./styles.css";
+import React from 'react';
+import Resources from './components/Resources';
+import Table from './components/Table';
+import Pagination from './components/Pagination';
+import Search from './components/Search';
+import getAoEResource from '../../api';
+import { sorting, DetailContext } from '../../utils';
+import './styles.css';
 
 class List extends React.Component {
   state = {
-    resource: "civilizations",
+    resource: 'civilizations',
     data: [],
     filteredData: [],
     loading: false,
@@ -17,8 +17,8 @@ class List extends React.Component {
     page: 1,
     pages: 1,
     pagesRange: [true, false],
-    search: "",
-    orderKey: ""
+    search: '',
+    orderKey: ''
   };
 
   componentDidMount() {
@@ -75,7 +75,7 @@ class List extends React.Component {
   }
 
   handleOnChangeResource = resource => {
-    this.setState({ resource, page: 1, pagesRange: [true, false], search: "" });
+    this.setState({ resource, page: 1, pagesRange: [true, false], search: '' });
   };
 
   handleOnChangeOrder = newKey => {
@@ -107,49 +107,36 @@ class List extends React.Component {
     });
   };
 
+  handleOnSelectDetail = detail => {
+    const { onSelectDetail } = this.context;
+    const { resource } = this.state;
+
+    onSelectDetail({ ...detail, resourceType: resource });
+  };
+
   render() {
-    const {
-      resource,
-      filteredData,
-      loading,
-      rows,
-      orderKey,
-      page,
-      pages,
-      pagesRange,
-      search
-    } = this.state;
+    const { resource, filteredData, loading, rows, orderKey, page, pages, pagesRange, search } = this.state;
 
     return (
-      <DetailContext.Consumer>
-        {({ onSelectDetail }) => (
-          <React.Fragment>
-            <Resources
-              active={resource}
-              onChangeResource={this.handleOnChangeResource}
-            />
-            <Search value={search} onInputChange={this.handleOnSearch} />
-            <div className="list">
-              <Table
-                data={filteredData.slice((page - 1) * rows, page * rows)}
-                resource={resource}
-                loading={loading}
-                orderKey={orderKey}
-                onChangeOrder={this.handleOnChangeOrder}
-                onSelectItem={onSelectDetail}
-              />
-              <Pagination
-                page={page}
-                pages={pages}
-                pagesRange={pagesRange}
-                onChangePage={this.handleOnChangePage}
-              />
-            </div>
-          </React.Fragment>
-        )}
-      </DetailContext.Consumer>
+      <React.Fragment>
+        <Resources active={resource} onChangeResource={this.handleOnChangeResource} />
+        <Search value={search} onInputChange={this.handleOnSearch} />
+        <div className="list">
+          <Table
+            data={filteredData.slice((page - 1) * rows, page * rows)}
+            resource={resource}
+            loading={loading}
+            orderKey={orderKey}
+            onChangeOrder={this.handleOnChangeOrder}
+            onSelectItem={this.handleOnSelectDetail}
+          />
+          <Pagination page={page} pages={pages} pagesRange={pagesRange} onChangePage={this.handleOnChangePage} />
+        </div>
+      </React.Fragment>
     );
   }
 }
+
+List.contextType = DetailContext;
 
 export default List;

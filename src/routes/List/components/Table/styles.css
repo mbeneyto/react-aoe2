@@ -3,8 +3,10 @@
 }
 
 .table__head {
-  border-bottom: 2px solid var(--color-broom);
+  background-color: var(--color-grey500);
+  border-bottom: 4px solid var(--color-grey100);
   text-align: left;
+  font-weight: var(--font-weight-bold);
 }
 
 .table__head th {
@@ -28,7 +30,7 @@
 }
 
 .table__body tr:not(:last-child) {
-  border-bottom: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-grey100);
 }
 
 .table__body td {

@@ -1,16 +1,18 @@
 :root {
   /* Color */
   --color-white: #ffffff;
-  --color-bubbles: #e8fdff;
-  --color-french-pass: #b8faff;
 
-  --color-black: #000000;
+  --color-grey100: #f7fafc;
+  --color-grey300: #e2e8f0;
+  --color-grey500: #a0aec0;
+  --color-grey600: #718096;
+  --color-grey800: #2d3748;
 
-  --color-broom: #ffe81f;
-  --color-snuff: #dddfee;
+  --color-blue600: #3182ce;
+  --color-blue500: #4299e1;
 
   /* Font */
-  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
   --font-base-size: 16px;
@@ -20,17 +22,12 @@
   --font-sm: calc(1em / var(--font-scale-ratio));
   --font-md: calc(1em * var(--font-scale-ratio));
   --font-lg: calc(1em * var(--font-scale-ratio) * var(--font-scale-ratio));
-  --font-xl: calc(
-    1em * var(--font-scale-ratio) * var(--font-scale-ratio) *
-      var(--font-scale-ratio)
-  );
+  --font-xl: calc(1em * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio));
   --font-xxl: calc(
-    1em * var(--font-scale-ratio) * var(--font-scale-ratio) *
-      var(--font-scale-ratio) * var(--font-scale-ratio)
+    1em * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio)
   );
   --font-xxxl: calc(
-    1em * var(--font-scale-ratio) * var(--font-scale-ratio) *
-      var(--font-scale-ratio) * var(--font-scale-ratio) *
+    1em * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio) *
       var(--font-scale-ratio)
   );
 
@@ -56,22 +53,33 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body,
-button {
+button,
+input {
   font-size: var(--font-base-size);
+  color: var(--color-grey800);
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 ul {
@@ -95,5 +103,4 @@ input {
   border: 0;
   border-radius: var(--radius);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  padding: var(--spacing-sm) var(--spacing-md);
 }

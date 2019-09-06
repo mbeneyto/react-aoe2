@@ -1,5 +1,5 @@
 .list {
   border-radius: var(--radius);
-  background-color: var(--color-snuff);
+  background-color: var(--color-grey300);
   overflow: hidden;
 }

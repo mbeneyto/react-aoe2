@@ -1,6 +1,6 @@
-import React from "react";
-import { Button } from "../../../../components/index";
-import "./styles.css";
+import React from 'react';
+import { Button } from '../../../../components/index';
+import './styles.css';
 
 const Pagination = ({ page, pages, pagesRange, onChangePage }) => {
   const handleOnChangePage = nextPage => () => {
@@ -9,15 +9,18 @@ const Pagination = ({ page, pages, pagesRange, onChangePage }) => {
 
   return (
     <div className="pagination">
-      <Button primary onClick={handleOnChangePage(-1)} disabled={pagesRange[0]}>
-        Prev
-      </Button>
-      <p>
+      <p className="pagination__pages">
         Page {page} of {pages}
       </p>
-      <Button primary onClick={handleOnChangePage(1)} disabled={pagesRange[1]}>
-        Next
-      </Button>
+      <div className="pagination__actions">
+        <Button primary onClick={handleOnChangePage(-1)} disabled={pagesRange[0]}>
+          Prev
+        </Button>
+        <div className="pagination__separator" />
+        <Button primary onClick={handleOnChangePage(1)} disabled={pagesRange[1]}>
+          Next
+        </Button>
+      </div>
     </div>
   );
 };

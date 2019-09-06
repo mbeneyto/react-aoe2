@@ -1,25 +1,23 @@
-import React from "react";
-import { DetailContext } from "../../utils";
-import "./styles.css";
+import React from 'react';
+import { DetailContext } from '../../utils';
+import './styles.css';
 
 class Main extends React.Component {
   state = {
-    selected: {}
+    detail: null
   };
 
-  handleOnSelectDetail = selected => {
-    this.setState({ selected });
+  handleOnSelectDetail = detail => {
+    this.setState({ detail });
   };
 
   render() {
     const { children } = this.props;
-    const { selected } = this.state;
+    const { detail } = this.state;
 
     return (
       <main className="main">
-        <DetailContext.Provider
-          value={{ selected, onSelectDetail: this.handleOnSelectDetail }}
-        >
+        <DetailContext.Provider value={{ detail, onSelectDetail: this.handleOnSelectDetail }}>
           {children}
         </DetailContext.Provider>
       </main>
