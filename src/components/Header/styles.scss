@@ -1,7 +1,9 @@
+@import '../../styles.scss';
+
 .header {
   display: flex;
   justify-content: center;
-  margin: var(--spacing-xxl) 0 var(--spacing-xxxl);
+  margin: $spacing-xxl 0 $spacing-xxxl;
 }
 
 .header__logo {

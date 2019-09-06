@@ -1,0 +1,39 @@
+@import '../../styles.scss';
+
+.button {
+  padding: $spacing-md $spacing-xl;
+  border: 0;
+  outline: none;
+  border-radius: $radius;
+  text-align: center;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.button--primary {
+  background-color: $color-grey600;
+  color: $color-grey100;
+}
+
+.button--primary:hover {
+  background-color: $color-grey500;
+}
+
+.button--active {
+  background-color: $color-blue600;
+}
+
+.button--active:hover {
+  background-color: $color-blue500;
+}
+
+.button--disabled {
+  opacity: $alpha32;
+  pointer-events: none;
+}
+
+.button--full {
+  display: block;
+  width: 100%;
+}

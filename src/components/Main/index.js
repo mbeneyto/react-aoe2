@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DetailContext } from '../../utils';
-import './styles.css';
+import './styles.scss';
 
 const Main = ({ children }) => {
   const [detail, setDetail] = useState(null);

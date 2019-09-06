@@ -1,22 +1,24 @@
+@import '../../styles.scss';
+
 .resource {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  padding: var(--spacing-lg);
-  border-radius: var(--radius);
-  background-color: var(--color-grey300);
+  padding: $spacing-lg;
+  border-radius: $radius;
+  background-color: $color-grey300;
 }
 
 .resource__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--color-grey100);
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-lg;
+  border-bottom: 1px solid $color-grey100;
 }
 
 .resource__type {
-  color: var(--color-grey600);
+  color: $color-grey600;
   text-transform: capitalize;
 }
 
@@ -29,7 +31,7 @@
   align-self: flex-start;
   width: 150px;
   border-radius: 50%;
-  margin-right: var(--spacing-xl);
+  margin-right: $spacing-xl;
 }
 
 .resource__detail {

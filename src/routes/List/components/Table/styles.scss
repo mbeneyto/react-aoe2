@@ -1,19 +1,21 @@
+@import '../../styles.scss';
+
 .table {
   width: 100%;
 }
 
 .table__head {
-  background-color: var(--color-grey500);
-  border-bottom: 4px solid var(--color-grey100);
+  background-color: $color-grey500;
+  border-bottom: 4px solid $color-grey100;
   text-align: left;
-  font-weight: var(--font-weight-bold);
+  font-weight: $font-weight-bold;
 }
 
 .table__head th {
   width: 25%;
   position: relative;
-  padding: var(--spacing-md);
-  font-size: var(--font-sm);
+  padding: $spacing-md;
+  font-size: $font-sm;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -30,9 +32,9 @@
 }
 
 .table__body tr:not(:last-child) {
-  border-bottom: 1px solid var(--color-grey100);
+  border-bottom: 1px solid $color-grey100;
 }
 
 .table__body td {
-  padding: var(--spacing-md);
+  padding: $spacing-md;
 }

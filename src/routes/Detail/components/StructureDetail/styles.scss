@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+.structure__special {
+  margin-bottom: $spacing-md;
+}
+
+.structure__special-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+}
+
+.structure__special-img {
+  width: 18px;
+  margin-right: $spacing-md;
+  color: $color-blue600;
+}

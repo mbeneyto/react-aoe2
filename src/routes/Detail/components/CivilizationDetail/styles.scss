@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+.civilization__bonus {
+  margin-bottom: $spacing-md;
+}
+
+.civilization__bonus-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+}
+
+.civilization__bonus-img {
+  width: 18px;
+  margin-right: $spacing-md;
+  color: $color-blue600;
+}

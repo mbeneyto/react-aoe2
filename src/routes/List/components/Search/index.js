@@ -1,6 +1,6 @@
 import React from 'react';
 import search from '../../../../assets/search.svg';
-import './styles.css';
+import './styles.scss';
 
 const Search = ({ onInputChange, value }) => (
   <div className="search">

@@ -1,10 +1,12 @@
+@import '../../styles.scss';
+
 .loader {
   display: flex;
   justify-content: center;
 }
 
 .loader__img {
-  padding: var(--spacing-md);
+  padding: $spacing-md;
   animation: spin 2s infinite;
 }
 

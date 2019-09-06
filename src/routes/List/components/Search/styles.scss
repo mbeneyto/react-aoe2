@@ -1,7 +1,9 @@
+@import '../../styles.scss';
+
 .search {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: $spacing-md;
 }
 
 .search__wrapper {
@@ -13,14 +15,14 @@
 .search__img {
   position: absolute;
   width: 20px;
-  left: var(--spacing-sm);
+  left: $spacing-sm;
 }
 
 .search__input {
   width: 250px;
-  padding: var(--spacing-md) var(--spacing-xl);
-  color: var(--color-slate-gray);
-  background-color: var(--color-catskill-white);
+  padding: $spacing-md $spacing-xl;
+  color: $color-grey600;
+  background-color: $color-grey300;
   transition: all 0.5s ease-in;
 }
 
