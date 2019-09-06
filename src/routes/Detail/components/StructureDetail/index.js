@@ -1,5 +1,5 @@
 import React from 'react';
-import checkImg from '../../../../assets/check-circle.svg';
+import { ReactComponent as CheckSVG } from '../../../../assets/check-circle.svg';
 import './styles.css';
 
 const StructureDetail = ({ structure }) => (
@@ -8,7 +8,7 @@ const StructureDetail = ({ structure }) => (
     <ul>
       {structure.special.map(special => (
         <li key={special} className="structure__special-item">
-          <img src={checkImg} className="structure__special-img" alt="" />
+          <CheckSVG className="structure__special-img" />
           {special}
         </li>
       ))}

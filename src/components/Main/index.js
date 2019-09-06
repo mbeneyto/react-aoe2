@@ -1,28 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DetailContext } from '../../utils';
 import './styles.css';
 
-class Main extends React.Component {
-  state = {
-    detail: null
-  };
+const Main = ({ children }) => {
+  const [detail, setDetail] = useState(null);
 
-  handleOnSelectDetail = detail => {
-    this.setState({ detail });
-  };
-
-  render() {
-    const { children } = this.props;
-    const { detail } = this.state;
-
-    return (
-      <main className="main">
-        <DetailContext.Provider value={{ detail, onSelectDetail: this.handleOnSelectDetail }}>
-          {children}
-        </DetailContext.Provider>
-      </main>
-    );
-  }
-}
+  return (
+    <main className="main">
+      <DetailContext.Provider value={{ detail, onSelectDetail: setDetail }}>{children}</DetailContext.Provider>
+    </main>
+  );
+};
 
 export default Main;

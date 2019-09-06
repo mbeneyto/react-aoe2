@@ -1,36 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { DetailContext } from '../../utils';
 import Resource from './components/Resource';
 import './styles.css';
 
-class Detail extends React.Component {
-  componentDidMount() {
-    const { detail } = this.context;
+const Detail = () => {
+  const { detail } = useContext(DetailContext);
 
+  const renderResourceDetail = () => {
     if (!detail) {
-      return;
-    }
-  }
-
-  render() {
-    const { detail } = this.context;
-
-    if (!detail) {
-      return <Link to="/">← Back</Link>;
+      return <p>Go back to the list to retrieve resource information</p>;
     }
 
-    return (
-      <React.Fragment>
-        <Link to="/">
-          <p className="detail__back">← Back</p>
-        </Link>
-        <Resource detail={detail} />
-      </React.Fragment>
-    );
-  }
-}
+    return <Resource detail={detail} />;
+  };
 
-Detail.contextType = DetailContext;
+  return (
+    <React.Fragment>
+      <Link to="/">
+        <p className="detail__back">← Back</p>
+      </Link>
+      {renderResourceDetail()}
+    </React.Fragment>
+  );
+};
 
 export default Detail;

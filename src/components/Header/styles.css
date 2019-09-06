@@ -1,11 +1,10 @@
 .header {
   display: flex;
   justify-content: center;
-  margin-bottom: var(--spacing-xxxl);
+  margin: var(--spacing-xxl) 0 var(--spacing-xxxl);
 }
 
 .header__logo {
-  height: 10vmin;
-  min-height: 100px;
+  height: 20vmin;
   pointer-events: none;
 }

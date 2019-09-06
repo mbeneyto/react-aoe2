@@ -11,4 +11,5 @@
 .civilization__bonus-img {
   width: 18px;
   margin-right: var(--spacing-md);
+  color: var(--color-blue600);
 }

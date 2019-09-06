@@ -1,5 +1,5 @@
 import React from 'react';
-import checkImg from '../../../../assets/check-circle.svg';
+import { ReactComponent as CheckSVG } from '../../../../assets/check-circle.svg';
 import './styles.css';
 
 const CivilizationsDetail = ({ civilization }) => (
@@ -8,7 +8,7 @@ const CivilizationsDetail = ({ civilization }) => (
     <ul>
       {civilization.civilization_bonus.map(bonus => (
         <li key={bonus} className="civilization__bonus-item">
-          <img src={checkImg} className="civilization__bonus-img" alt="" />
+          <CheckSVG className="civilization__bonus-img" />
           {bonus}
         </li>
       ))}

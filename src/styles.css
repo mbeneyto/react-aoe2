@@ -18,21 +18,11 @@
   --font-base-size: 16px;
   --font-scale-ratio: 1.2;
 
-  --font-xs: calc(1em / (var(--font-scale-ratio) * var(--font-scale-ratio)));
   --font-sm: calc(1em / var(--font-scale-ratio));
   --font-md: calc(1em * var(--font-scale-ratio));
   --font-lg: calc(1em * var(--font-scale-ratio) * var(--font-scale-ratio));
-  --font-xl: calc(1em * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio));
-  --font-xxl: calc(
-    1em * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio)
-  );
-  --font-xxxl: calc(
-    1em * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio) * var(--font-scale-ratio) *
-      var(--font-scale-ratio)
-  );
 
   /* Spacing */
-  /* --spacing: 8px; */
   --spacing-xxxl: calc(var(--font-base-size) * 5); /* 80px */
   --spacing-xxl: calc(var(--font-base-size) * 3); /* 48px */
   --spacing-xl: calc(var(--font-base-size) * 2); /* 32px */
@@ -43,7 +33,6 @@
   --radius: 4px;
 
   /* Alpha */
-  --alpha16: 0.16;
   --alpha32: 0.32;
 }
 
